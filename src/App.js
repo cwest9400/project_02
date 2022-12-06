@@ -1,10 +1,11 @@
 import BookContainer from './Components/BookContainer';
+import Nav from './Nav';
 // import './App.css';
 
 function App() {
   return (
     <div>
-      <p>Book Information</p>
+      <Nav />
       <BookContainer />
     </div>
   );
