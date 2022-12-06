@@ -1,4 +1,4 @@
-import './book-card.css'
+import '../book-card.css'
 import { useState, useEffect } from "react"
 
 
@@ -17,19 +17,23 @@ function BookContainer(props) {
     
     return (
         <section className="book-container">
-            
+            {books.map((book, index) => {
+                return (
+                    <div className="book-card" key={index}>
+                    <p>book title</p>
+                    <img src='https://books.google.com/books/content?id=1M0Y2RYqffIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
+                    alt ="book image"/>
+                </div>
+                
+                )
+            })}
                               
 
-                    <div className="book-card">
-            <p>book title</p>
-            <img src='https://books.google.com/books/content?id=1M0Y2RYqffIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-            alt ="book image"/>
-        </div>
-        
+           
        
         
     </section>
-            
+          
 
             )   
 
