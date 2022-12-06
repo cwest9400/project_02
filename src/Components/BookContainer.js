@@ -26,11 +26,11 @@ function BookContainer(props) {
             {books.map((book) => {
                 return (
                         <div className="book-card">
-                            <h2 className='book-title'>book title</h2>
-                            <p className='author'>Author</p>
-                            {/* <img src={thumbnail} alt=""/> */}
-                            <img src='https://books.google.com/books/content?id=1M0Y2RYqffIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
-                                alt="book image" />
+                            <h2 className='book-title'>{book.volumeInfo.title}</h2>
+                            <p className='author'>{book.volumeInfo.authors}</p>
+                            <img src={book.volumeInfo.imageLinks.smallThumbnail} alt=""/>
+                            {/* <img src='https://books.google.com/books/content?id=1M0Y2RYqffIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
+                                alt="book image" /> */}
                         </div>
 
                 )
