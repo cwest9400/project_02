@@ -14,18 +14,25 @@ function BookContainer(props) {
     }, [])
 
     console.log(books)
-    
+    const card=({item})=>{
+        console.log(item)
     return (
         <section className="book-container">
-            {books.map((book, index) => {
+            {
+            item.map((book, index) => {
+                // let thumbnail=book.volumeInfo.imageLinks.smallThumbnail;
+console.log(item)
                 return (
-                    <div className="book-card" key={index}>
+                    <>
+                    <div className="book-card">
                     <p>book title</p>
+                    {/* <img src={thumbnail} alt=""/> */}
                     <img src='https://books.google.com/books/content?id=1M0Y2RYqffIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api'
                     alt ="book image"/>
                 </div>
-                
+                </>
                 )
+            
             })}
                               
 
@@ -36,7 +43,7 @@ function BookContainer(props) {
           
 
             )   
-
+        }
     
 }
 
