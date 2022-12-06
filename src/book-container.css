@@ -1,0 +1,16 @@
+.book-container {
+    background-color: blueviolet;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    row-gap: 20px;
+    width: 100%;
+    align-content: center;
+    /* padding: 50px; */
+    
+
+}
+
+
+
